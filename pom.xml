@@ -11,7 +11,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>utils</groupId>
+    <groupId>com.utils</groupId>
     <artifactId>TgBotUtils</artifactId>
     <version>1</version>
 
