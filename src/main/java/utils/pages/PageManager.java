@@ -12,7 +12,7 @@ import java.util.Map;
 
 public abstract class PageManager {
 
-    private final Map<String, Page> pages = new HashMap<>();
+    protected final Map<String, Page> pages = new HashMap<>();
 
     protected abstract void setupPages();
 
