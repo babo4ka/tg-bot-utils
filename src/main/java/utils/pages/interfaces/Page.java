@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface Page {
 
+    String name();
     default List<PartialBotApiMethod<Message>> execute(Update update) throws TelegramApiException {
         return null;
     }
