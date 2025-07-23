@@ -5,6 +5,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import utils.pages.interfaces.Page;
+import utils.tuples.Pair;
 
 import java.util.HashMap;
 import java.util.List;
@@ -20,11 +21,11 @@ public abstract class PageManager {
         this.pages.put(pageName, page);
     }
 
-    public abstract List<PartialBotApiMethod<Message>> execute(Update update, String pageName) throws TelegramApiException;
+    public abstract List<Pair<PartialBotApiMethod<Message>, Boolean>>  execute(Update update, String pageName) throws TelegramApiException;
 
-    public abstract List<PartialBotApiMethod<Message>> executeWithArgs(Update update, String pageName, String...args) throws TelegramApiException;
+    public abstract List<Pair<PartialBotApiMethod<Message>, Boolean>>  executeWithArgs(Update update, String pageName, String...args) throws TelegramApiException;
 
-    public abstract List<PartialBotApiMethod<Message>> executeCallback(Update update, String pageName) throws TelegramApiException;
+    public abstract List<Pair<PartialBotApiMethod<Message>, Boolean>>  executeCallback(Update update, String pageName) throws TelegramApiException;
 
-    public abstract List<PartialBotApiMethod<Message>> executeCallbackWithArgs(Update update, String pageName, String...args) throws TelegramApiException;
+    public abstract List<Pair<PartialBotApiMethod<Message>, Boolean>>  executeCallbackWithArgs(Update update, String pageName, String...args) throws TelegramApiException;
 }
