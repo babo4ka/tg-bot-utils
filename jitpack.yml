@@ -1,0 +1,4 @@
+jdk:
+  - openjdk24
+install:
+  - mvn clean install -DskipTests
