@@ -2,3 +2,5 @@ jdk:
   - openjdk24
 install:
   - mvn clean install -DskipTests
+maven:
+  version: 3.9.6
