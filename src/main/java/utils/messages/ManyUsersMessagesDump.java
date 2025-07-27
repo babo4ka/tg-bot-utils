@@ -26,4 +26,8 @@ public class ManyUsersMessagesDump{
             messages.put(chatId, newList);
         }
     }
+
+    public List<DeleteMessage> getMessagesById(long chatId){
+        return messages.get(chatId);
+    }
 }
