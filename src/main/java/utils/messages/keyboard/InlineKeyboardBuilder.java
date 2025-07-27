@@ -21,6 +21,19 @@ public class InlineKeyboardBuilder {
         return this;
     }
 
+    public InlineKeyboardBuilder addURLButton(
+            String text,
+            String url
+    ){
+        this.buttonsRow.add(InlineKeyboardButton.builder()
+                .url(url)
+                .text(text)
+                .build()
+        );
+
+        return this;
+    }
+
     public InlineKeyboardBuilder nextRow(){
         this.buttonsMatrix.add(this.buttonsRow);
         this.buttonsRow = new ArrayList<>();
